@@ -13,7 +13,7 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
-    
+    let loginToList = "LoginToList"
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -22,6 +22,13 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Auth.auth().addStateDidChangeListener(){ auth, user in
+            if user != nil {
+//                self.performSegue(withIdentifier: self.loginToList, sender: nil)
+                self.emailTextField.text = nil
+                self.passwordTextField.text = nil
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

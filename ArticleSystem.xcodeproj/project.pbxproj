@@ -14,6 +14,8 @@
 		E357AB4C20C65F71006540DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E357AB4A20C65F71006540DA /* LaunchScreen.storyboard */; };
 		E357AB5420C66355006540DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E357AB5320C66355006540DA /* GoogleService-Info.plist */; };
 		E357AB9020C9165A006540DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357AB8F20C9165A006540DA /* LoginViewController.swift */; };
+		E357AB9320C92855006540DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357AB9220C92855006540DA /* User.swift */; };
+		E357AB9520C92ED5006540DA /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357AB9420C92ED5006540DA /* ArticleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		E357AB5320C66355006540DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E357AB8B20C908F0006540DA /* ArticleSystem.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ArticleSystem.entitlements; sourceTree = "<group>"; };
 		E357AB8F20C9165A006540DA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E357AB9220C92855006540DA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E357AB9420C92ED5006540DA /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 		E357AB4020C65F6F006540DA /* ArticleSystem */ = {
 			isa = PBXGroup;
 			children = (
+				E357AB9120C92833006540DA /* Models */,
 				E357AB8B20C908F0006540DA /* ArticleSystem.entitlements */,
 				E357AB8C20C90AFF006540DA /* Controllers */,
 				E357AB4120C65F6F006540DA /* AppDelegate.swift */,
@@ -88,8 +93,17 @@
 			isa = PBXGroup;
 			children = (
 				E357AB8F20C9165A006540DA /* LoginViewController.swift */,
+				E357AB9420C92ED5006540DA /* ArticleViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E357AB9120C92833006540DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E357AB9220C92855006540DA /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F8DCC1A145CE9146CB3CEA0D /* Pods */ = {
@@ -226,7 +240,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E357AB9020C9165A006540DA /* LoginViewController.swift in Sources */,
+				E357AB9520C92ED5006540DA /* ArticleViewController.swift in Sources */,
 				E357AB4220C65F6F006540DA /* AppDelegate.swift in Sources */,
+				E357AB9320C92855006540DA /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

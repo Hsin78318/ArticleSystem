@@ -84,11 +84,60 @@
                     <connections>
                         <outlet property="emailTextField" destination="8Rk-l1-ECw" id="Cda-Yd-gb9"/>
                         <outlet property="passwordTextField" destination="3xK-gB-cgy" id="5KG-AZ-46v"/>
+                        <segue destination="fkR-4I-Fjg" kind="presentation" identifier="LoginToList" id="0Ny-T4-pWd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BZh-2k-yt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="68" y="-146"/>
+            <point key="canvasLocation" x="-31" y="-146"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="j8B-ue-zzq">
+            <objects>
+                <navigationController id="fkR-4I-Fjg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Cy-p2-CV4">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RAN-YX-D35" kind="relationship" relationship="rootViewController" id="86a-BG-fdS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1rE-W4-S3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778" y="-146"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gl4-c8-nrc">
+            <objects>
+                <viewController id="RAN-YX-D35" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wsx-hB-Dce">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b9P-xN-koS">
+                                <rect key="frame" x="101" y="88" width="165" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bb8-FR-hpd">
+                                <rect key="frame" x="23" y="206" width="321" height="394"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RKn-5G-aeI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lfp-aB-TMJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gmQ-wY-m4u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1528.8" y="-146.17691154422789"/>
         </scene>
     </scenes>
 </document>

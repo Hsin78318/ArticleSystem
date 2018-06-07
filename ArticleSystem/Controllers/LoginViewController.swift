@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
         
         Auth.auth().addStateDidChangeListener(){ auth, user in
             if user != nil {
-//                self.performSegue(withIdentifier: self.loginToList, sender: nil)
+                self.performSegue(withIdentifier: self.loginToList, sender: nil)
                 self.emailTextField.text = nil
                 self.passwordTextField.text = nil
             }
@@ -70,13 +70,20 @@ class LoginViewController: UIViewController {
         
         //呈現效果
         present(alert, animated: true, completion: nil)
-        
-        
     }
+}
+
+extension LoginViewController: UITextFieldDelegate{
     
-    
-    
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTextField {
+            passwordTextField.becomeFirstResponder()
+        }
+        if textField == passwordTextField {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
 }
 
 

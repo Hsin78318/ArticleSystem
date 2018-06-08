@@ -48,8 +48,31 @@ class MainTableViewController: UITableViewController {
             action: #selector(done)
         )
         self.navigationItem.rightBarButtonItem = rightButtonItem
+        
+        databaseRef = Database.database().reference()
+        storageRef = Storage.storage().reference()
+        
     }
-
+    
+    func fetchArticlesList(){
+        
+        refHandle = databaseRef.child("Article").observe(.childAdded, with: {(snapshot) in
+            
+            if let dictionary = snapshot.value as? [String : AnyObject]{
+                print("dictionary is \(dictionary)")
+                
+                let articleDetail = Articles()
+                
+                articleDetail.setValuesForKeys(dictionary)
+                self.articleList.append(articleDetail)
+                
+                DispatchQueue.main.async{
+                    self.ArticlesTableView.reloadData()
+                }
+            }
+        })
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -63,19 +86,23 @@ class MainTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return articleList.count
     }
+    
+    
+    
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ArticlesTableViewCell
 
-        // Configure the cell...
-
+        cell.articleNameLabel.text = articleList[indexPath.row].articleName
+        cell.authorNameLabel.text = articleList[indexPath.row].authorName
+        cell.publishDateLabel.text = articleList[indexPath.row].publishDate
+        cell.articleContent.text = articleList[indexPath.row].content
+        
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.

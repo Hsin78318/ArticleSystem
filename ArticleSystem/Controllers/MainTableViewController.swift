@@ -9,35 +9,45 @@
 import UIKit
 import Firebase
 
+
+
 class MainTableViewController: UITableViewController {
 
     
     
     @IBOutlet var ArticlesTableView: UITableView!
     
-//    var refHandle: UInt!
-//   
-//    let ref = Database.database().reference(withPath: "article-items")
-//    let usersRef = Database.database().reference(withPath: "online")
-//
-//    
-//    
+    var refHandle: UInt!
+    var databaseRef: DatabaseReference!
+    var storageRef: StorageReference!
     
+    var uid = ""
     
+    var articleList = [Articles]()
     
-    
-    
-    
-    
+    @objc func done()  {
+        let stortboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextViewController = stortboard.instantiateViewController(withIdentifier: "ArticlesViewController") as! ArticlesViewController
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-     
+        ArticlesTableView.delegate = self
+        ArticlesTableView.dataSource = self
         
+        if let user = Auth.auth().currentUser{
+            uid = user.uid
+        }
         
-        
-        
+        let rightButtonItem = UIBarButtonItem.init(
+            title: "新增",
+            style: .done,
+            target: self,
+            action: #selector(done)
+        )
+        self.navigationItem.rightBarButtonItem = rightButtonItem
     }
 
     override func didReceiveMemoryWarning() {

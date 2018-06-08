@@ -15,9 +15,10 @@
 		E357AB5420C66355006540DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E357AB5320C66355006540DA /* GoogleService-Info.plist */; };
 		E357AB9020C9165A006540DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357AB8F20C9165A006540DA /* LoginViewController.swift */; };
 		E357AB9320C92855006540DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357AB9220C92855006540DA /* User.swift */; };
-		E357AB9520C92ED5006540DA /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357AB9420C92ED5006540DA /* ArticleViewController.swift */; };
 		E357AB9720CA311E006540DA /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357AB9620CA311E006540DA /* Articles.swift */; };
 		E357AB9B20CA34BC006540DA /* ArticlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357AB9A20CA34BC006540DA /* ArticlesTableViewCell.swift */; };
+		E357AB9F20CA39FB006540DA /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357AB9E20CA39FB006540DA /* MainTableViewController.swift */; };
+		E357ABA120CA3B29006540DA /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357ABA020CA3B29006540DA /* ArticlesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +35,10 @@
 		E357AB8B20C908F0006540DA /* ArticleSystem.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ArticleSystem.entitlements; sourceTree = "<group>"; };
 		E357AB8F20C9165A006540DA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E357AB9220C92855006540DA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		E357AB9420C92ED5006540DA /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		E357AB9620CA311E006540DA /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 		E357AB9A20CA34BC006540DA /* ArticlesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewCell.swift; sourceTree = "<group>"; };
+		E357AB9E20CA39FB006540DA /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		E357ABA020CA3B29006540DA /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				E357AB8F20C9165A006540DA /* LoginViewController.swift */,
-				E357AB9420C92ED5006540DA /* ArticleViewController.swift */,
+				E357AB9E20CA39FB006540DA /* MainTableViewController.swift */,
+				E357ABA020CA3B29006540DA /* ArticlesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -247,9 +250,10 @@
 			files = (
 				E357AB9020C9165A006540DA /* LoginViewController.swift in Sources */,
 				E357AB9720CA311E006540DA /* Articles.swift in Sources */,
-				E357AB9520C92ED5006540DA /* ArticleViewController.swift in Sources */,
 				E357AB4220C65F6F006540DA /* AppDelegate.swift in Sources */,
+				E357ABA120CA3B29006540DA /* ArticlesViewController.swift in Sources */,
 				E357AB9B20CA34BC006540DA /* ArticlesTableViewCell.swift in Sources */,
+				E357AB9F20CA39FB006540DA /* MainTableViewController.swift in Sources */,
 				E357AB9320C92855006540DA /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,10 +403,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UGLRCJA22Q;
 				INFOPLIST_FILE = ArticleSystem/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Test.com.ArticleSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -419,10 +420,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UGLRCJA22Q;
 				INFOPLIST_FILE = ArticleSystem/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Test.com.ArticleSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

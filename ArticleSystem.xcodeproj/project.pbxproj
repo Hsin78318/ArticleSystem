@@ -19,6 +19,7 @@
 		E357AB9B20CA34BC006540DA /* ArticlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357AB9A20CA34BC006540DA /* ArticlesTableViewCell.swift */; };
 		E357AB9F20CA39FB006540DA /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357AB9E20CA39FB006540DA /* MainTableViewController.swift */; };
 		E357ABA120CA3B29006540DA /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357ABA020CA3B29006540DA /* ArticlesViewController.swift */; };
+		E357ABA320CA9199006540DA /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357ABA220CA9199006540DA /* InitialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		E357AB9A20CA34BC006540DA /* ArticlesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewCell.swift; sourceTree = "<group>"; };
 		E357AB9E20CA39FB006540DA /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		E357ABA020CA3B29006540DA /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
+		E357ABA220CA9199006540DA /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				E357AB8F20C9165A006540DA /* LoginViewController.swift */,
 				E357AB9E20CA39FB006540DA /* MainTableViewController.swift */,
 				E357ABA020CA3B29006540DA /* ArticlesViewController.swift */,
+				E357ABA220CA9199006540DA /* InitialViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				E357AB9B20CA34BC006540DA /* ArticlesTableViewCell.swift in Sources */,
 				E357AB9F20CA39FB006540DA /* MainTableViewController.swift in Sources */,
 				E357AB9320C92855006540DA /* User.swift in Sources */,
+				E357ABA320CA9199006540DA /* InitialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +407,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UGLRCJA22Q;
 				INFOPLIST_FILE = ArticleSystem/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Test.com.ArticleSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -420,7 +427,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UGLRCJA22Q;
 				INFOPLIST_FILE = ArticleSystem/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Test.com.ArticleSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

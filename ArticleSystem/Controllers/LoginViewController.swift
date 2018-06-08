@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
         
         Auth.auth().addStateDidChangeListener(){ auth, user in
             if user != nil {
-                self.performSegue(withIdentifier: self.loginToList, sender: nil)
+//                self.performSegue(withIdentifier: self.loginToList, sender: nil)
                 self.emailTextField.text = nil
                 self.passwordTextField.text = nil
             }
@@ -43,9 +43,9 @@ class LoginViewController: UIViewController {
                                       preferredStyle: .alert)
         //儲存註冊資料
         let saveAction = UIAlertAction(title: "儲存", style: .default) { _ in
-            
             let emailField = alert.textFields![0]
             let passwordField = alert.textFields![1]
+            
             
             Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { uesr, error in
                 if error == nil {

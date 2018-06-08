@@ -84,7 +84,6 @@
                     <connections>
                         <outlet property="emailTextField" destination="8Rk-l1-ECw" id="Cda-Yd-gb9"/>
                         <outlet property="passwordTextField" destination="3xK-gB-cgy" id="5KG-AZ-46v"/>
-                        <segue destination="fkR-4I-Fjg" kind="presentation" identifier="LoginToList" id="0Ny-T4-pWd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BZh-2k-yt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -100,44 +99,93 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="RAN-YX-D35" kind="relationship" relationship="rootViewController" id="86a-BG-fdS"/>
+                        <segue destination="wb7-57-i1R" kind="relationship" relationship="rootViewController" id="N99-Cm-rl1"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rE-W4-S3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="778" y="-146"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="gl4-c8-nrc">
+        <!--文章集合-->
+        <scene sceneID="9Y6-SX-vFf">
             <objects>
-                <viewController id="RAN-YX-D35" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wsx-hB-Dce">
+                <tableViewController id="wb7-57-i1R" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LNG-P7-mYU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b9P-xN-koS">
-                                <rect key="frame" x="101" y="88" width="165" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bb8-FR-hpd">
-                                <rect key="frame" x="23" y="206" width="321" height="394"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="RKn-5G-aeI"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Lfp-aB-TMJ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gmQ-wY-m4u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="348" id="gHh-Cm-V9X">
+                                <rect key="frame" x="0.0" y="28" width="375" height="348"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gHh-Cm-V9X" id="8Hu-Yq-8nE" customClass="ArticlesTableViewCell" customModule="ArticleSystem" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="347.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="文章名稱Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFd-qp-6P8">
+                                            <rect key="frame" x="118" y="42" width="136" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="作者名稱Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfi-kZ-8hB">
+                                            <rect key="frame" x="131" y="94" width="111" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="發布日期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDm-SA-JZ3">
+                                            <rect key="frame" x="152" y="134" width="70" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PJV-0g-RnS">
+                                            <rect key="frame" x="77" y="173" width="240" height="128"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <connections>
+                                        <outlet property="articleContent" destination="PJV-0g-RnS" id="QXl-WO-g6C"/>
+                                        <outlet property="articleNameLabel" destination="XFd-qp-6P8" id="Ko5-AP-0vM"/>
+                                        <outlet property="authorNameLabel" destination="Mfi-kZ-8hB" id="uuZ-qZ-D4N"/>
+                                        <outlet property="publishDateLabel" destination="UDm-SA-JZ3" id="ely-RQ-yyr"/>
+                                    </connections>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wb7-57-i1R" id="NG8-mT-it1"/>
+                            <outlet property="delegate" destination="wb7-57-i1R" id="ptf-rF-sLu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="文章集合" id="S1b-5g-kmq"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5NF-qx-kAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1528.8" y="-146.17691154422789"/>
+            <point key="canvasLocation" x="1492" y="-149.77511244377811"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Mon-9r-VQz">
+            <objects>
+                <viewController id="ecl-PO-4dn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="end-SK-zqL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Ogq-9t-vvU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kOB-7N-uye" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1499" y="552"/>
         </scene>
     </scenes>
 </document>

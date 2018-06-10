@@ -6,7 +6,7 @@
 //  Copyright © 2018年 Chen Hsin. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Articles: NSObject {
     var articleName: String?

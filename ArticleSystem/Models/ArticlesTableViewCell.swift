@@ -10,9 +10,13 @@ import UIKit
 
 class ArticlesTableViewCell: UITableViewCell {
 
+    
     @IBOutlet weak var articleNameLabel: UILabel!
+    
     @IBOutlet weak var authorNameLabel: UILabel!
+    
     @IBOutlet weak var publishDateLabel: UILabel!
+    
     @IBOutlet weak var articleContent: UITextView!
     
     override func awakeFromNib() {

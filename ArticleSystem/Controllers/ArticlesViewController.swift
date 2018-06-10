@@ -26,8 +26,7 @@ class ArticlesViewController: UIViewController {
     let uniqueString = NSUUID().uuidString //?
     
     
-    @IBAction func confirm(_ sender: Any) {
-        
+    @IBAction func confirm(_ sender: Any){
         if articleNameTextField.text != "" && authorNameTextField.text != "" && publishDateTextField.text != "" &&
             articleContentTextField.text != ""{
             
@@ -35,15 +34,13 @@ class ArticlesViewController: UIViewController {
             Database.database().reference(withPath: "Author/\(self.uniqueString)").child("authorName").setValue(authorNameTextField.text!)
             Database.database().reference(withPath: "PublishDate/\(self.uniqueString)").child(publishDateTextField.text!)
             Database.database().reference(withPath: "Content/\(self.uniqueString)").child("articleContent").setValue(articleContentTextField.text!)
-            
             done()
-            
         }
     }
     
     func done(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let nextViewController = storyboard.instantiateViewController(withIdentifier: "MainTableViewController") as! UINavigationController
+        let nextViewController = storyboard.instantiateViewController(withIdentifier: "MainNavigation") as! UINavigationController
         self.present(nextViewController, animated: true, completion: nil)
     }
     

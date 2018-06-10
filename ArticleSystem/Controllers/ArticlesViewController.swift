@@ -30,10 +30,10 @@ class ArticlesViewController: UIViewController {
         if articleNameTextField.text != "" && authorNameTextField.text != "" && publishDateTextField.text != "" &&
             articleContentTextField.text != ""{
             
-            Database.database().reference(withPath: "Article/\(self.uniqueString)").child("articleName").setValue(articleContentTextField.text!)
-            Database.database().reference(withPath: "Author/\(self.uniqueString)").child("authorName").setValue(authorNameTextField.text!)
-            Database.database().reference(withPath: "PublishDate/\(self.uniqueString)").child(publishDateTextField.text!)
-            Database.database().reference(withPath: "Content/\(self.uniqueString)").child("articleContent").setValue(articleContentTextField.text!)
+            Database.database().reference(withPath: "Article/\(self.uniqueString)").child("articleName").setValue(articleNameTextField.text!)
+            Database.database().reference(withPath: "Article/\(self.uniqueString)").child("authorName").setValue(authorNameTextField.text!)
+            Database.database().reference(withPath: "Article/\(self.uniqueString)").child("publishDate").setValue(publishDateTextField.text!)
+            Database.database().reference(withPath: "Article/\(self.uniqueString)").child("articleContent").setValue(articleContentTextField.text!)
             done()
         }
     }

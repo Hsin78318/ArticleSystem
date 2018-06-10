@@ -58,7 +58,7 @@ class MainTableViewController: UIViewController, UITableViewDataSource, UITableV
     func fetchArticlesList(){
         
         
-        refHandle = databaseRef.child("Meal").observe(.childAdded, with: { (snapshot) in
+        refHandle = databaseRef.child("id").observe(.childAdded, with: { (snapshot) in
             
             if let dictionary = snapshot.value as? [String : AnyObject]{
                 print("dictionary is \(dictionary)")
